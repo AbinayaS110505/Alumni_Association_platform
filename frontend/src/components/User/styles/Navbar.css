@@ -1,0 +1,133 @@
+/* Navbar Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1f1c1c; /* Primary color */
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f0ebeb;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.menu-icon {
+  display: none; /* Hidden on desktop */
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  background-color: #0056b3;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown {
+  position: relative;
+  background-color:#050303;
+}
+
+.dropdown-btn {
+  background-color:#050303;
+  border: none;
+ 
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  background-color: #0056b3;
+  color: #050303;
+}
+
+.dropdown-menu {
+  background-color:#050303;
+  position: absolute;
+  color: #050303;
+  top: 40px;
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+      display: block; /* Visible on mobile */
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #007bff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.open {
+      display: flex; /* Show menu on mobile when toggled */
+  }
+}
